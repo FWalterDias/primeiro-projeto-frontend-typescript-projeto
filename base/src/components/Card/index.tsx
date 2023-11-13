@@ -1,27 +1,27 @@
-import { Avatar } from "../Avatar";
 import { useNavigate } from "react-router-dom";
+import TeacherProps from "../../types/teachers";
+import { Avatar } from "../Avatar";
 import "./styles.css";
+import { useTeacherDetail } from "../../hooks/useTeacherDetail";
 
-type TeacherProps = {
-    teacher: {
-        id: number,
-        avatar: string,
-        name: string
-    }
+type CardTeacherProps = {
+    teacher: TeacherProps
 }
 
-export function Card({ teacher }: TeacherProps) {
+export function Card({ teacher }: CardTeacherProps) {
 
     const navigate = useNavigate();
+    const { handleInsertTeacher } = useTeacherDetail();
 
     function handleTeacherDetail() {
-        navigate("/teacher-detail")
+        handleInsertTeacher(teacher);
+        navigate("/teacher-detail");
     }
 
     return (
-        <div 
-        className="card" 
-        onClick={handleTeacherDetail}>
+        <div
+            className="card"
+            onClick={handleTeacherDetail}>
             <Avatar image={teacher.avatar} />
 
             <h1>

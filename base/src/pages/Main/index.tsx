@@ -31,10 +31,7 @@ export function Main() {
         {allTeachers.map((teacher) => (
           <Card 
           key={teacher.id }
-          teacher={{ 
-            id: teacher.id, 
-            name: teacher.name, 
-            avatar:teacher.avatar  }} />
+          teacher={teacher} />
         ))}
       </div>
     </div>
