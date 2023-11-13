@@ -2,7 +2,7 @@ import { Link, useNavigate } from "react-router-dom";
 import './styles.css';
 import Logo from "../../assets/logoCubos.png";
 import api from "../../services/api";
-import { FormEvent, useState } from "react";
+import { FormEvent, useState, useEffect } from "react";
 import { useAuth } from "../../hooks/useAuth";
 
 export function SignIn() {
@@ -28,13 +28,21 @@ export function SignIn() {
       const { accessToken } = response.data;
 
       handleAddToken(accessToken);
-      
+
       navigate("/main")
     } catch (error) {
       console.log(error);
     }
   }
 
+  useEffect((() => {
+    
+    if(handleGetToken()) {
+      navigate("/main");
+      return;
+    }
+
+  }), []);
 
   return (
     <div className='container container-signin'>
