@@ -1,10 +1,14 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import './styles.css';
 import Logo from "../../assets/logoCubos.png";
 import api from "../../services/api";
 import { FormEvent, useState } from "react";
+import { useAuth } from "../../hooks/useAuth";
 
 export function SignIn() {
+
+  const { handleGetToken, handleAddToken } = useAuth();
+  const navigate = useNavigate();
 
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
@@ -21,8 +25,11 @@ export function SignIn() {
         password: password
       });
 
-      console.log(response);
+      const { accessToken } = response.data;
+
+      handleAddToken(accessToken);
       
+      navigate("/main")
     } catch (error) {
       console.log(error);
     }
