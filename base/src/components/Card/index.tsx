@@ -1,8 +1,9 @@
 import { Avatar } from "../Avatar";
+import { useNavigate } from "react-router-dom";
 import "./styles.css";
 
 type TeacherProps = {
-    teacher:{
+    teacher: {
         id: number,
         avatar: string,
         name: string
@@ -10,8 +11,17 @@ type TeacherProps = {
 }
 
 export function Card({ teacher }: TeacherProps) {
+
+    const navigate = useNavigate();
+
+    function handleTeacherDetail() {
+        navigate("/teacher-detail")
+    }
+
     return (
-        <div className="card">
+        <div 
+        className="card" 
+        onClick={handleTeacherDetail}>
             <Avatar image={teacher.avatar} />
 
             <h1>

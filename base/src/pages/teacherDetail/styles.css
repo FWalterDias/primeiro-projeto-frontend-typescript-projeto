@@ -1,44 +1,43 @@
-.container-signin {
-    justify-content: center;
-}
-
-.signin {
+.teacher-detail{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    align-items: center;
 
-    width: 494px;
-    height: 475px;
-    background-color: #44444D;
+    width: 467px;
+    height: 562px;
+    background-color: #DA0175;
+    border-radius: 16px;
 
-    padding: 32px 96px 68px 96px;
-    font-family: "Roboto", sans-serif;
+    padding: 24px 54px;
+    margin: 92px 0; 
+
+    color: #FFF;
 }
 
-.signin img {
-    align-self: center;
-    width: 155px;
-    height: 68px;
+.teacher-detail h1{
+    margin: 24px 0 12px 0;
+
+    font-size: 28px;
 }
 
-.signin form {
-     margin-top: 60px;
+.teacher-detail span{
+    margin-bottom: 20px;
+
+    font-size: 18px;
 }
 
-.signin form input{
-    margin-bottom: 16px;
+.teacher-detail h3{
+    margin: 16px 0 24px 0;
+
+    font-size: 22px;
+    text-decoration: underline;
 }
 
-.signin form span{
-    margin-right: 4px;
-}
+.teacher-detail p{
+    max-height: 150px;
+    padding: 5px;
 
-.signin form span, a{
-    text-decoration: none;
-    color: white;
-    font-size: 12px;
-}
-
-.signin form button {
-    margin-top: 60px;
+    font-size: 14px;
+    text-align: justify;
+    overflow-y: auto;
 }

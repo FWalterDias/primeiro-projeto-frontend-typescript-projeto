@@ -2,10 +2,11 @@ import { Route, Routes, Navigate, Outlet } from "react-router-dom";
 import { Main } from "./pages/Main";
 import { SignIn } from "./pages/SignIn";
 import { useAuth } from "./hooks/useAuth";
+import { TeacherDetail } from "./pages/teacherDetail";
 
 export function MainRoutes() {
 
-    type ProtectedRoutsProps ={
+    type ProtectedRoutsProps = {
         redrectTo: string
     }
 
@@ -21,6 +22,7 @@ export function MainRoutes() {
 
             <Route element={<ProtectedRouts redrectTo={"/"} />}>
                 <Route path="/main" element={<Main />} />
+                <Route path="/teacher-detail" element={<TeacherDetail />} />
             </Route>
         </Routes>
     );
