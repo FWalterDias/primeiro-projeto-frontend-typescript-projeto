@@ -1,0 +1,44 @@
+.container-signin {
+    justify-content: center;
+}
+
+.signin {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    width: 494px;
+    height: 475px;
+    background-color: #44444D;
+
+    padding: 32px 96px 68px 96px;
+    font-family: "Roboto", sans-serif;
+}
+
+.signin img {
+    align-self: center;
+    width: 155px;
+    height: 68px;
+}
+
+.signin form {
+     margin-top: 60px;
+}
+
+.signin form input{
+    margin-bottom: 16px;
+}
+
+.signin form span{
+    margin-right: 4px;
+}
+
+.signin form span, a{
+    text-decoration: none;
+    color: white;
+    font-size: 12px;
+}
+
+.signin form button {
+    margin-top: 60px;
+}

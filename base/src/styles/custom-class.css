@@ -1,0 +1,52 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    min-height: 100vh;
+    width: 100vw;
+}
+
+button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 48px;
+    border: none;
+
+    color: #FFF;
+    font-family: "Roboto", sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: .7;
+}
+
+.btn-pink {
+    background-color: #DA0175;
+    color: white;
+}
+
+input {
+    width: 100%;
+    height: 48px;
+    border: none;
+
+    background-color: #2E2E36;
+
+    font-family: "Roboto", sans-serif;
+    font-size: 12px;
+
+    padding: 18px 16px;
+}
+
+input::placeholder {
+    color: #FFF;
+    font-weight: 400;
+}
